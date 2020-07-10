@@ -1,0 +1,198 @@
+
+config dnsmasq
+	option domainneeded '1'
+	option localise_queries '1'
+	option rebind_protection '1'
+	option rebind_localhost '1'
+	option local '/lan/'
+	option domain 'lan'
+	option expandhosts '1'
+	option authoritative '1'
+	option readethers '1'
+	option leasefile '/tmp/dhcp.leases'
+	option nonwildcard '1'
+	option localservice '1'
+	option filter_aaaa '1'
+	option port '53'
+	option cachesize '0'
+	option noresolv '1'
+	list server '127.0.0.1#6053'
+
+config dhcp 'lan'
+	option interface 'lan'
+	option start '100'
+	option limit '150'
+	option leasetime '12h'
+
+config dhcp 'wan'
+	option interface 'wan'
+	option ignore '1'
+
+config host
+	option name 'Nas'
+	option dns '1'
+	option mac '00:11:32:8f:62:8d'
+	option ip '192.168.1.5'
+	option leasetime 'infinite'
+
+config host
+	option name 'Unifi'
+	option dns '1'
+	option ip '192.168.1.8'
+	option leasetime 'infinite'
+	option mac '00:0c:29:e8:7c:f9'
+
+config host
+	option name 'AP1'
+	option dns '1'
+	option mac 'f0:9f:c2:6c:e5:18'
+	option ip '192.168.1.9'
+	option leasetime 'infinite'
+
+config host
+	option name 'AP2'
+	option dns '1'
+	option mac 'f0:9f:c2:6c:d7:68'
+	option ip '192.168.1.10'
+	option leasetime 'infinite'
+
+config host
+	option name 'Camera'
+	option dns '1'
+	option mac '18:99:f5:cb:2e:a2'
+	option ip '192.168.1.11'
+	option leasetime 'infinite'
+
+config host
+	option dns '1'
+	option ip '192.168.1.13'
+	option leasetime 'infinite'
+	option name 'Ubuntu'
+	option mac '00:0c:29:a4:e2:0f'
+
+config host
+	option name 'LifeSmar'
+	option dns '1'
+	option mac 'bc:34:00:23:4a:b4'
+	option ip '192.168.1.14'
+	option leasetime 'infinite'
+
+config host
+	option name 'DenonX2400H'
+	option dns '1'
+	option mac '00:05:cd:99:53:c8'
+	option ip '192.168.1.15'
+	option leasetime 'infinite'
+
+config host
+	option name 'Windows10'
+	option dns '1'
+	option ip '192.168.1.16'
+	option leasetime 'infinite'
+	option mac '00:0c:29:39:2f:76'
+
+config host
+	option name 'MiAiSoundbox1'
+	option dns '1'
+	option mac '3c:bd:3e:e0:c0:c3'
+	option ip '192.168.1.17'
+	option leasetime 'infinite'
+
+config host
+	option name 'MiAiSoundbox2'
+	option dns '1'
+	option mac '50:a0:09:81:8f:f8'
+	option ip '192.168.1.18'
+	option leasetime 'infinite'
+
+config host
+	option name 'Airpurifier1'
+	option dns '1'
+	option mac '28:6c:07:19:02:fe'
+	option ip '192.168.1.19'
+	option leasetime 'infinite'
+
+config host
+	option name 'Airpurifier2'
+	option dns '1'
+	option mac '28:6c:07:18:fb:4b'
+	option ip '192.168.1.20'
+	option leasetime 'infinite'
+
+config host
+	option name 'Notebook1'
+	option dns '1'
+	option mac '74:e5:f9:a6:e2:7b'
+	option ip '192.168.1.21'
+	option leasetime 'infinite'
+
+config host
+	option name 'Notebook2'
+	option dns '1'
+	option mac 'D8:C4:97:5C:D4:8E'
+	option ip '192.168.1.22'
+	option leasetime 'infinite'
+
+config host
+	option dns '1'
+	option ip '192.168.1.23'
+	option leasetime 'infinite'
+	option name 'Huawei-iPhone'
+	option mac 'e6:f7:ae:38:6f:0c'
+
+config host
+	option name 'Iunna-iPhone'
+	option dns '1'
+	option mac 'f8:38:80:3a:28:08'
+	option ip '192.168.1.24'
+	option leasetime 'infinite'
+
+config host
+	option name 'iunnaIpad'
+	option dns '1'
+	option mac '43:0c:22:de:17:c6'
+	option ip '192.168.1.25'
+	option leasetime 'infinite'
+
+config host
+	option name 'iunnaWatch'
+	option dns '1'
+	option mac '34:7c:25:bd:89:90'
+	option ip '192.168.1.26'
+	option leasetime 'infinite'
+
+config host
+	option name 'Rockrobo'
+	option dns '1'
+	option mac '78:11:dc:ed:d3:0f'
+	option ip '192.168.1.27'
+	option leasetime 'infinite'
+
+config host
+	option name 'Printer'
+	option dns '1'
+	option mac '00:bb:c1:29:d9:b3'
+	option ip '192.168.1.28'
+	option leasetime 'infinite'
+
+config host
+	option name 'Rice'
+	option dns '1'
+	option mac '78:11:dc:0c:f6:cc'
+	option ip '192.168.1.29'
+	option leasetime 'infinite'
+
+config host
+	option name 'Water'
+	option dns '1'
+	option mac '78:11:dc:01:4e:32'
+	option ip '192.168.1.30'
+	option leasetime 'infinite'
+
+config host
+	option name 'MacBook'
+	option dns '1'
+	option mac 'a8:66:7f:28:7b:63'
+	option ip '192.168.1.31'
+	option leasetime 'infinite'
+
